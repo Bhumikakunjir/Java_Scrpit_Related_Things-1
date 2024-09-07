@@ -1,12 +1,163 @@
 Level 1 : 
 
 1.Reverse a String .
+
+Ans:- 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+// program to reverse a string
+
+function reverseString(str) {
+
+    // empty string
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+
+// take input from the user
+const string = prompt('Enter a string: ');
+
+const result = reverseString(string);
+console.log(result);
+
+Output:-
+Enter a String:-Hello world
+dlrow olleH
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
 2.Check for Palindrome .
+
+Ans:-
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+function validatePalin(str) {  
+  
+    // get the total length of the words  
+    const len = string.length;  
+  
+    // Use for loop to divide the words into 2 half  
+    for (let i = 0; i < len / 2; i++) {  
+  
+        // validate the first and last characters are same  
+        if (string[i] !== string[len - 1 - i]) {  
+            alert( 'It is not a palindrome');  
+        }  
+    }  
+    alert( 'It is a palindrome');  
+}  
+  
+// accept the string or number from the prompt  
+const string = prompt('Enter a string or number: ');  
+  
+const value = validatePalin(string);  
+  
+console.log(value); 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
 3.Find the Maximum Number in an Array .
-4.Find the Maximum Number in an Array .
+
+Ans:- 
+-------------------------------------------------------------------------------------------------------------------------------------
+function findMax(arr) {
+  if (arr.length === 0) return undefined; // Handle empty array case
+
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+// Example usage
+const numbers = [5, 12, 7, 34, 22];
+const maxNumber = findMax(numbers);
+console.log(maxNumber);
+
+// Outputs: 34
+---------------------------------------------------------------------------------------------------------------------------------------
+4.Find the Minimum Number in an Array .
+Ans:-
+----------------------------------------------------------------------------------------------------------------------------------------
+function findMin(arr) {
+  if (arr.length === 0) return undefined; // Handle empty array case
+
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+
+// Example usage
+const numbers = [5, 12, 7, 34, 22];
+const maxNumber = findmin(numbers);
+console.log(minNumber);
+
+Output:- 5
+---------------------------------------------------------------------------------------------------------------------------------------------
 5.Factorial of a Number .
+
+Ans:-
+---------------------------------------------------------------------------------------------------------------------------------------------
+function factorial(n) {
+  if (n < 0) return 'Invalid input'; // Factorial is not defined for negative numbers
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+// Example usage
+console.log(factorial(5)); // Outputs: 120
+console.log(factorial(0)); // Outputs: 1
+-------------------------------------------------------------------------------------------------------------------------------------------------
 6. Remove Duplicates from an Array .
+
+Ans:-
+-------------------------------------------------------------------------------------------------------------------------------------------------
+const array = [1, 2, 2, 3, 4, 4, 5];
+const uniqueArray = [];
+
+for (let i = 0; i < array.length; i++) {
+  if (uniqueArray.indexOf(array[i]) === -1) {
+    uniqueArray.push(array[i]);
+  }
+}
+
+console.log(uniqueArray); // Outputs: [1, 2, 3, 4, 5]
+-------------------------------------------------------------------------------------------------------------------------------------------------- 
 7.Find the Missing Number in an Array .
+
+Ans:-
+-------------------------------------------------------------------------------------------------------------------------------------------------
+function findMissingNumber(arr) {
+  const n = arr.length + 1;
+  const numberSet = new Set(arr);
+  
+  for (let i = 1; i <= n; i++) {
+    if (!numberSet.has(i)) {
+      return i;
+    }
+  }
+  
+  return null; // In case no number is missing, though this shouldn't happen with valid input
+}
+
+// Example usage
+const array = [1, 2, 4, 5, 6]; // Missing number is 3
+console.log(findMissingNumber(array)); 
+
+Outputs: 3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 8.Check if Two Strings are Anagrams .
 
 Level 2 : 
